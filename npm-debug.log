@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.7.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.1
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle FOODr3k@0.0.1~prestart: FOODr3k@0.0.1
+6 silly lifecycle FOODr3k@0.0.1~prestart: no script for prestart, continuing
+7 info lifecycle FOODr3k@0.0.1~start: FOODr3k@0.0.1
+8 verbose lifecycle FOODr3k@0.0.1~start: unsafe-perm in lifecycle true
+9 verbose lifecycle FOODr3k@0.0.1~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/robbiesantos/Desktop/reactathon/FOODr3k/node_modules/.bin:/usr/local/bin:/usr/local/sbin:~/bin:/Users/robbiesantos/.rbenv/bin:/Users/robbiesantos/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/apprentice/Desktop/android-sdk
+10 verbose lifecycle FOODr3k@0.0.1~start: CWD: /Users/robbiesantos/Desktop/reactathon/FOODr3k
+11 silly lifecycle FOODr3k@0.0.1~start: Args: [ '-c',
+11 silly lifecycle   'node node_modules/react-native/local-cli/cli.js start' ]
+12 silly lifecycle FOODr3k@0.0.1~start: Returned: code: 11  signal: null
+13 info lifecycle FOODr3k@0.0.1~start: Failed to exec start script
+14 verbose stack Error: FOODr3k@0.0.1 start: `node node_modules/react-native/local-cli/cli.js start`
+14 verbose stack Exit status 11
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:194:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:194:7)
+14 verbose stack     at maybeClose (internal/child_process.js:899:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+15 verbose pkgid FOODr3k@0.0.1
+16 verbose cwd /Users/robbiesantos/Desktop/reactathon/FOODr3k
+17 error Darwin 16.4.0
+18 error argv "/usr/local/Cellar/node/7.7.1/bin/node" "/usr/local/bin/npm" "start"
+19 error node v7.7.1
+20 error npm  v4.1.2
+21 error code ELIFECYCLE
+22 error FOODr3k@0.0.1 start: `node node_modules/react-native/local-cli/cli.js start`
+22 error Exit status 11
+23 error Failed at the FOODr3k@0.0.1 start script 'node node_modules/react-native/local-cli/cli.js start'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the FOODr3k package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node node_modules/react-native/local-cli/cli.js start
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs FOODr3k
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls FOODr3k
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
