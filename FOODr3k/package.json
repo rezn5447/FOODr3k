@@ -8,10 +8,13 @@
   },
   "dependencies": {
     "@shoutem/ui": "^0.10.13",
+    "axios": "^0.15.3",
+    "lodash": "^4.17.4",
     "query-string": "^4.3.2",
     "react": "15.4.2",
     "react-native": "0.42.0",
     "react-native-linear-gradient": "^2.0.0",
+    "react-native-maps": "^0.13.0",
     "react-native-vector-icons": "^4.0.0"
   },
   "devDependencies": {
