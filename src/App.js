@@ -10,14 +10,20 @@ import {
 } from 'react-native';
 import MapView, { MAP_TYPES } from 'react-native-maps';
 const { width, height } = Dimensions.get('window');
+
 // Github HQ:
 // lat: 37.782227,
 // lng: -122.391050
+
 const ASPECT_RATIO = width / height;
 const LATITUDE = 37.782227;
 const LONGITUDE = -122.391050;
 const LATITUDE_DELTA = 0.01;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
+const CLIENT_ID = '27037c67-f394-4cfd-ab51-069ac71132fb';
+const OPENTABLE_ENDPOINT = 'https://platform.otqa.com/sync/listings?latitude="37.782227"&longitude="-122.391050"';
+const API_DEBOUNCE_TIME = 2000;
 
 class App extends Component {
   constructor(props) {
@@ -44,9 +50,14 @@ class App extends Component {
     };
   }
   componentWillMount() {
-    axios.get('http://opentable.herokuapp.com/api/restaurants?zip=94107')
+
+    axios.get('https://platform.otqa.com/sync/listings?latitude="37.782227"&longitude="-122.391050"', {
+      headers: {"Authorization": "bearer 27037c67-f394-4cfd-ab51-069ac71132fb"}
+    })
     .then(response => {
-      this.setState({ restaurants: response.data });
+      console.log(response)
+      this.setState({ restaurants: response.data })
+      console.log(this.state.restaurants)
       this.randomRestaurant();
     });
   }
@@ -76,10 +87,11 @@ class App extends Component {
     // });
   }
   randomRestaurant() {
-    const { restaurants } = this.state.restaurants;
-    const randRestaurant = _.sample(restaurants);
-    this.setRestaurantMarker(randRestaurant);
-  }
+     const { restaurants } = this.state.restaurants;
+     const randRestaurant = _.sample(restaurants);
+     this.setRestaurantMarker(randRestaurant);
+    }
+
   render() {
     return (
       <View style={styles.container}>
