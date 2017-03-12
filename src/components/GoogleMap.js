@@ -10,7 +10,9 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
+import { Container, Content } from 'native-base';
 import MapView, { MAP_TYPES } from 'react-native-maps';
+import Footer from './Footer';
 
 const { width, height } = Dimensions.get('window');
 
@@ -57,7 +59,6 @@ class GoogleMap extends Component {
       headers: { Authorization: 'bearer 27037c67-f394-4cfd-ab51-069ac71132fb' }
     })
     .then(response => {
-      console.log(response);
       this.setState({ restaurants: response.data });
       console.log(this.state.restaurants);
       this.randomRestaurant();
@@ -96,41 +97,44 @@ class GoogleMap extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <MapView
-          showsUserLocation
-          showsMyLocationButton
-          provider={this.props.provider}
-          ref={ref => { this.map = ref; }}
-          mapType={MAP_TYPES.STANDARD}
-          style={styles.map}
-          initialRegion={this.state.region}
-          onRegionChange={region => this.onRegionChange(region)}
-        >
-          {this.state.markers.map(marker => (
-            <MapView.Marker
-              title={marker.title}
-              key={marker.key}
-              description={marker.description}
-              coordinate={marker.coordinate}
-            />
-          ))}
-        </MapView>
-        <View style={[styles.bubble, styles.latlng]}>
-          <Text style={{ textAlign: 'center' }}>
-            {this.state.userPosition.coordinate.latitude.toPrecision(7)},
-            {this.state.userPosition.coordinate.longitude.toPrecision(7)}
-          </Text>
-        </View>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            onPress={() => this.randomRestaurant()}
-            style={[styles.bubble, styles.button]}
-          >
-            <Text>Restaurant Choice</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+
+          <View style={styles.container}>
+            <MapView
+              showsUserLocation
+              showsMyLocationButton
+              provider={this.props.provider}
+              ref={ref => { this.map = ref; }}
+              mapType={MAP_TYPES.STANDARD}
+              style={styles.map}
+              initialRegion={this.state.region}
+              onRegionChange={region => this.onRegionChange(region)}
+            >
+              {this.state.markers.map(marker => (
+                <MapView.Marker
+                  title={marker.title}
+                  key={marker.key}
+                  description={marker.description}
+                  coordinate={marker.coordinate}
+                />
+              ))}
+            </MapView>
+            <View style={[styles.bubble, styles.latlng]}>
+              <Text style={{ textAlign: 'center' }}>
+                {this.state.userPosition.coordinate.latitude.toPrecision(7)},
+                {this.state.userPosition.coordinate.longitude.toPrecision(7)}
+              </Text>
+            </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity
+                onPress={() => this.randomRestaurant()}
+                style={[styles.bubble, styles.button]}
+              >
+                <Text>Restaurant Choice</Text>
+              </TouchableOpacity>
+            </View>
+            <Footer />
+          </View>
+
     );
   }
 }
