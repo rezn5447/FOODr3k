@@ -74,8 +74,8 @@ class App extends Component {
           key: restaurant.id,
           image: restaurant.image_url,
           coordinate: {
-            latitude: restaurant.lat,
-            longitude: restaurant.lng,
+            latitude: restaurant.latitude,
+            longitude: restaurant.longitude,
         } }]
     });
     console.log(this.state.markers);
@@ -87,8 +87,8 @@ class App extends Component {
     // });
   }
   randomRestaurant() {
-     const { restaurants } = this.state.restaurants;
-     const randRestaurant = _.sample(restaurants);
+     const { items } = this.state.restaurants;
+     const randRestaurant = _.sample(items);
      this.setRestaurantMarker(randRestaurant);
     }
 
