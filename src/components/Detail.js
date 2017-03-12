@@ -6,7 +6,8 @@ import axios from 'axios';
 import {
   StyleSheet,
   View,
-  Image
+  Image,
+  Linking
 } from 'react-native';
 
 import { Container, Content, Card, CardItem, Left, Body, Thumbnail, Text, Button, Icon } from 'native-base';
@@ -31,13 +32,14 @@ class Detail extends Component {
 			state, 
 			country 
 		} = this.props.selectedRestaurant;
+		console.log(this.props.selectedImage);
     return (
 			<Container>
 				<Content>
 					<Card>
 						<CardItem bordered>
 							<Left>
-								<Thumbnail />
+								<Thumbnail source={{ uri: `${this.props.selectedImage}`}}/>
 								<Body>
 									<Text>{name}</Text>
 									<Text note>{address}</Text>
@@ -46,14 +48,14 @@ class Detail extends Component {
 								</Body>
 							</Left>
 						</CardItem>
-
 						<CardItem>
-							<Body>
-								
-								<Text>
-									{reservation_url}
-									{profile_url}
-								</Text>
+							<Body style={{ flexDirection: 'row' }}>
+								<Button style={{ paddingRight: 10 }} onPress={() => Linking.openURL(reservation_url)}>
+									<Text>Reserve a table</Text>
+								</Button>
+								<Button onPress={() => Linking.openURL(reservation_url)}>
+									<Text>Profile</Text>
+								</Button>
 							</Body>
 						</CardItem>
 					</Card>
