@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/FOODr3kTests/FOODr3kTests.m \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/FOODr3kTests/FOODr3kTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h \
@@ -29,13 +29,13 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.cpp \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.h \
-  /Users/robbiesantos/Desktop/reactathon/FOODr3k/FOODr3k/node_modules/react-native/ReactCommon/cxxreact/oss-compat-util.h
+  /Users/Aidan/Desktop/workspace/FOODr3k/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.cpp \
+  /Users/Aidan/Desktop/workspace/FOODr3k/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.h \
+  /Users/Aidan/Desktop/workspace/FOODr3k/node_modules/react-native/ReactCommon/cxxreact/oss-compat-util.h

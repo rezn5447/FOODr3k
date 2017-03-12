@@ -9,6 +9,7 @@
   "dependencies": {
     "@shoutem/ui": "^0.10.13",
     "axios": "^0.15.3",
+    "eslint-config-rallycoding": "^3.2.0",
     "lodash": "^4.17.4",
     "query-string": "^4.3.2",
     "react": "15.4.2",
