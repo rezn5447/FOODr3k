@@ -10,7 +10,6 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
-import { Container, Content } from 'native-base';
 import MapView, { MAP_TYPES } from 'react-native-maps';
 import Footer from './Footer';
 
@@ -52,7 +51,8 @@ class GoogleMap extends Component {
         },
       restaurants: [],
       markers: [],
-      selectedRestaurant: {}
+      selectedRestaurant: {},
+      selectedImage: null
     };
   }
   componentWillMount() {
@@ -67,6 +67,7 @@ class GoogleMap extends Component {
   }
   componentDidMount() {
   }
+
   onRegionChange(region) {
     this.setState({ region });
   }
@@ -91,14 +92,18 @@ class GoogleMap extends Component {
     // });
   }
   randomRestaurant() {
-    console.log(this.state.restaurants)
+    console.log(this.state.restaurants);
      const { items } = this.state.restaurants;
      console.log(items);
      const randRestaurant = _.sample(items);
      console.log(randRestaurant);
      this.setState({ selectedRestaurant: randRestaurant });
-     this.setRestaurantMarker(this.state.selectedRestaurant);
-    }
+     axios.get(`https://opentable.herokuapp.com/api/restaurants?name=${this.state.selectedRestaurant.name}&city=${this.state.selectedRestaurant.city}`)
+    .then(response => {
+      this.setState({ selectedImage: response.data.restaurants[0].image_url });
+    });
+    this.setRestaurantMarker(this.state.selectedRestaurant);
+  }
 
   render() {
     console.log('-----------');
@@ -140,7 +145,10 @@ class GoogleMap extends Component {
                 <Text>Restaurant Choice</Text>
               </TouchableOpacity>
             </View>
-            <Footer restaurant={this.state.selectedRestaurant}/>
+            <Footer 
+            restaurant={this.state.selectedRestaurant} 
+            selectedImage={this.state.selectedImage} 
+            />
           </View>
 
     );
