@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import { text } from 'react-native-communications';
 
 import {
   StyleSheet,
@@ -44,17 +45,19 @@ class Detail extends Component {
 									<Text>{name}</Text>
 									<Text note>{address}</Text>
 									<Text note>{`${city}, ${state} ${country}`}</Text>
-									<Text note>{phone_number}</Text>
 								</Body>
 							</Left>
 						</CardItem>
 						<CardItem>
-							<Body style={{ flexDirection: 'row' }}>
-								<Button style={{ paddingRight: 10 }} onPress={() => Linking.openURL(reservation_url)}>
+							<Body style={{ flex: 1, flexDirection: 'column', justifyContent: 'space-around', height: 300 }}>
+								<Button full onPress={() => Linking.openURL(reservation_url)}>
 									<Text>Reserve a table</Text>
 								</Button>
-								<Button onPress={() => Linking.openURL(reservation_url)}>
+								<Button full onPress={() => Linking.openURL(reservation_url)}>
 									<Text>Profile</Text>
+								</Button>
+								<Button full onPress={() => text(phone_number, "I'm hungry!")}>
+									<Text>Call Business</Text>
 								</Button>
 							</Body>
 						</CardItem>
