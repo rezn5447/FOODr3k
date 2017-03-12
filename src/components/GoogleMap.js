@@ -79,24 +79,21 @@ class GoogleMap extends Component {
           key: restaurant.id,
           image: restaurant.image_url,
           coordinate: {
-            latitude: restaurant.latitude,
-            longitude: restaurant.longitude,
+            latitude: parseFloat(restaurant.latitude),
+            longitude: parseFloat(restaurant.longitude),
         } }]
-    });
-    // console.log(this.state.markers);
+    }); 
   }
-  fitAninmation() {
-    // this.map.fitToCoordinates([MARKERS[2], MARKERS[3]], {
-    //   edgePadding: { top: 100, right: 100, bottom: 100, left: 100 },
-    //   animated: true,
-    // });
-  }
+
+  // fitAninmation() {
+  //   this.map.fitToCoordinates([this.state.MARKERS[0].coordinate, this.state.MARKERS[1].coordinate], {
+  //     edgePadding: { top: 100, right: 100, bottom: 100, left: 100 },
+  //     animated: true,
+  //   });
+  // }
   randomRestaurant() {
-    console.log(this.state.restaurants);
      const { items } = this.state.restaurants;
-     console.log(items);
      const randRestaurant = _.sample(items);
-     console.log(randRestaurant);
      this.setState({ selectedRestaurant: randRestaurant });
      axios.get(`https://opentable.herokuapp.com/api/restaurants?name=${this.state.selectedRestaurant.name}&city=${this.state.selectedRestaurant.city}`)
     .then(response => {
@@ -106,15 +103,13 @@ class GoogleMap extends Component {
   }
 
   render() {
-    console.log('-----------');
-    console.log(this.state.selectedRestaurant);
-    console.log('-----------');
     return (
 
           <View style={styles.container}>
             <MapView
               showsUserLocation
               showsMyLocationButton
+              key={1}
               provider={this.props.provider}
               ref={ref => { this.map = ref; }}
               mapType={MAP_TYPES.STANDARD}
@@ -125,7 +120,8 @@ class GoogleMap extends Component {
               {this.state.markers.map(marker => (
                 <MapView.Marker
                   title={marker.title}
-                  key={marker.key}
+                  id={marker.key || 1}
+                  key={marker.key || 1}
                   description={marker.description}
                   coordinate={marker.coordinate}
                 />

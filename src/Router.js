@@ -11,7 +11,7 @@ const RouterComponent = () => {
 				<Scene 
 				key="googlemap" 
 				component={GoogleMap} 
-				title="Fooder3k"
+				title="Foodr3k"
 				/>
 				<Scene 
 				key="detail" 
