@@ -11,12 +11,15 @@ import {
 
 class Footer extends Component {
 	onNavPress() {
-		console.log('Pressed the nav')
+		Actions.googlemap();
 	}
 	onDetailPress() {
-		Actions.detail();
+		console.log('-----------');
+		console.log(this.props.restaurant)
+		console.log('-----------');
+		Actions.detail({ selectedRestaurant: this.props.restaurant || null });
 	}
-	
+
   render() {
     return (
       <NativeFooter>

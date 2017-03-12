@@ -9,6 +9,8 @@
   "dependencies": {
     "@shoutem/ui": "^0.10.13",
     "axios": "^0.15.3",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
     "eslint-config-rallycoding": "^3.2.0",
     "lodash": "^4.17.4",
     "native-base": "^2.0.12",
@@ -18,7 +20,8 @@
     "react-native-linear-gradient": "^2.0.0",
     "react-native-maps": "^0.13.0",
     "react-native-router-flux": "^3.38.0",
-    "react-native-vector-icons": "^4.0.0"
+    "react-native-vector-icons": "^4.0.0",
+    "yelp": "^1.0.2"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
