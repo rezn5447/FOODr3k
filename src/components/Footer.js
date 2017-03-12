@@ -17,7 +17,7 @@ class Footer extends Component {
 		console.log('-----------');
 		console.log(this.props.restaurant)
 		console.log('-----------');
-		Actions.detail({ selectedRestaurant: this.props.restaurant || null });
+		Actions.detail({ selectedRestaurant: this.props.restaurant || null, selectedImage: this.props.selectedImage });
 	}
 
   render() {
