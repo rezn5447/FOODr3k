@@ -41,7 +41,7 @@ class GoogleMap extends Component {
       },
         userPosition: {
           id: 0,
-          key: 0,
+          key: 82479372,
           title: 'You are here.',
           description: 'Welcome to FOODr3k!',
           coordinate: {
@@ -56,7 +56,7 @@ class GoogleMap extends Component {
     };
   }
   componentWillMount() {
-    axios.get('https://platform.otqa.com/sync/listings?latitude="37.782227"&longitude="-122.391050"', {
+    axios.get('https://platform.otqa.com/sync/listings?limit=5&zip="94107"', {
       headers: { Authorization: 'bearer 27037c67-f394-4cfd-ab51-069ac71132fb' }
     })
     .then(response => {
@@ -83,14 +83,16 @@ class GoogleMap extends Component {
             longitude: parseFloat(restaurant.longitude),
         } }]
     }); 
+    this.fitAnimation()
   }
 
-  // fitAninmation() {
-  //   this.map.fitToCoordinates([this.state.MARKERS[0].coordinate, this.state.MARKERS[1].coordinate], {
-  //     edgePadding: { top: 100, right: 100, bottom: 100, left: 100 },
-  //     animated: true,
-  //   });
-  // }
+  fitAnimation() {
+    const { markers } = this.state;
+    this.map.fitToCoordinates([markers[0].coordinate, markers[1].coordinate], {
+      edgePadding: { top: 100, right: 100, bottom: 100, left: 100 },
+      animated: true,
+    });
+  }
   randomRestaurant() {
      const { items } = this.state.restaurants;
      const randRestaurant = _.sample(items);
