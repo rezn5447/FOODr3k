@@ -51,7 +51,8 @@ class GoogleMap extends Component {
           }
         },
       restaurants: [],
-      markers: []
+      markers: [],
+      selectedRestaurant: {}
     };
   }
   componentWillMount() {
@@ -60,7 +61,7 @@ class GoogleMap extends Component {
     })
     .then(response => {
       this.setState({ restaurants: response.data });
-      console.log(this.state.restaurants);
+      // console.log(this.state.restaurants);
       this.randomRestaurant();
     });
   }
@@ -81,7 +82,7 @@ class GoogleMap extends Component {
             longitude: restaurant.longitude,
         } }]
     });
-    console.log(this.state.markers);
+    // console.log(this.state.markers);
   }
   fitAninmation() {
     // this.map.fitToCoordinates([MARKERS[2], MARKERS[3]], {
@@ -90,12 +91,19 @@ class GoogleMap extends Component {
     // });
   }
   randomRestaurant() {
+    console.log(this.state.restaurants)
      const { items } = this.state.restaurants;
+     console.log(items);
      const randRestaurant = _.sample(items);
-     this.setRestaurantMarker(randRestaurant);
+     console.log(randRestaurant);
+     this.setState({ selectedRestaurant: randRestaurant });
+     this.setRestaurantMarker(this.state.selectedRestaurant);
     }
 
   render() {
+    console.log('-----------');
+    console.log(this.state.selectedRestaurant);
+    console.log('-----------');
     return (
 
           <View style={styles.container}>
@@ -132,7 +140,7 @@ class GoogleMap extends Component {
                 <Text>Restaurant Choice</Text>
               </TouchableOpacity>
             </View>
-            <Footer />
+            <Footer restaurant={this.state.selectedRestaurant}/>
           </View>
 
     );
