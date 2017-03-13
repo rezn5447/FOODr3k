@@ -22,7 +22,7 @@ We would like to expand FOODr3k into a more complete, social experience. This in
 ## UI
 
 
-[map](FOODr3k/mapview.png)
+![map](FOODr3k/mapview.png)
 
-[details](FOODr3k/detailview.png)
+![details](FOODr3k/detailview.png)
 
