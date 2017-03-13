@@ -9,7 +9,7 @@
 
 When you're open to anything, we put everything into the palm of your hand using our app, FOODr3k. With a single tap, this app will take all of the pressure off answering the age old question of  "What should we eat?".
 
-While a person can never be perfect, we believe that we've created something that takes the pressure a perfect decision off of an individual. Sometimes the right choice is making one to begin with.
+While a person can never be perfect, we believe that we've created something that takes the pressure of a perfect decision off of the user. Sometimes the right choice is making one to begin with.
 
 ### TECH STACK  - API -  USAGE
 
@@ -21,8 +21,10 @@ We would like to expand FOODr3k into a more complete, social experience. This in
 
 ## UI
 
+![mapview](https://cloud.githubusercontent.com/assets/20196708/23837723/ea261546-0749-11e7-8c9f-31d172076a34.png)
+![detailview](https://cloud.githubusercontent.com/assets/20196708/23837722/ea2602a4-0749-11e7-9d89-52768d843d04.png)
 
-![map](FOODr3k/mapview.png)
-
-![details](FOODr3k/detailview.png)
-
+## Team
+[@legaspi21](https://github.com/legaspi21)
+[@rezn5447](https://github.com/rezn5447)
+[@robbiealixsantos](https://github.com/robbiealixsantos)
