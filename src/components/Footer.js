@@ -14,9 +14,6 @@ class Footer extends Component {
 		Actions.googlemap();
 	}
 	onDetailPress() {
-		console.log('-----------');
-		console.log(this.props.restaurant)
-		console.log('-----------');
 		Actions.detail({ selectedRestaurant: this.props.restaurant || null, selectedImage: this.props.selectedImage });
 	}
 
@@ -35,10 +32,5 @@ class Footer extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-});
-
 
 export default Footer;
