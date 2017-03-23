@@ -20,14 +20,14 @@ class Footer extends Component {
   render() {
     return (
       <NativeFooter>
-				<FooterTab>
-					<Button onPress={() => this.onNavPress()}>
-						<Icon name='navigate' />
-					</Button>
-					<Button active onPress={() => this.onDetailPress()}>
-						<Icon name='restaurant' />
-					</Button>
-				</FooterTab>
+	<FooterTab>
+		<Button onPress={() => this.onNavPress()}>
+			<Icon name='navigate' />
+		</Button>
+		<Button active onPress={() => this.onDetailPress()}>
+			<Icon name='restaurant' />
+		</Button>
+	</FooterTab>
     </NativeFooter>
     );
   }
